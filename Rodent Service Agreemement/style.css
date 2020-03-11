@@ -1,0 +1,342 @@
+.pointeGraphics {
+  margin-right: 5px;
+  width: 120px;
+  height: 100px;
+}
+.terms {
+  display: none;
+}
+.full {
+  width: 100%;
+  box-sizing: border-box;
+}
+.half {
+  width: 49%;
+  box-sizing: border-box;
+}
+.oneThird {
+  width: 33%;
+  box-sizing: border-box;
+}
+.oneQuarter {
+  width: 25%;
+  box-sizing: border-box;
+}
+.twoThirds {
+  width: 66%;
+  box-sizing: border-box;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clr {
+  clear: both;
+}
+.contract .priceLabel {
+  float: left;
+  width: 45%;
+}
+.contract .priceValue {
+  float: right;
+  width: 45%;
+  text-align: right;
+}
+.optionalServices li .optionalPrice,
+.optionalServices li div {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.optionalServices li .optionalService {
+  position: static;
+  float: left;
+  text-align: left;
+}
+.optionalServices li img {
+  height: 20px;
+  width: 30px;
+  float: left;
+}
+.optionalServices {
+  margin: 0px;
+  padding: 0px;
+}
+.optionalServices li {
+  width: 100%;
+  margin-left: 0%;
+  float: left;
+  line-height: 25px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  position: relative;
+}
+.ecoshieldPestLevels div {
+  width: 75%;
+  left: 25%;
+  top: 0px;
+  z-index: 11;
+  position: absolute;
+}
+.ecoshieldPestLevels img {
+  width: 90%;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: 70px;
+}
+.ecoshieldPestLevels {
+  height: 165px;
+  position: relative;
+}
+.contractGuarantee {
+  width: 70%;
+  max-width: 300px;
+}
+.contract {
+  margin-top: 0px;
+  font-family: Arial;
+  font-size: 10pt;
+}
+.contract .thirdLeft {
+  width: 32%;
+  float: left;
+  margin-bottom: 6px;
+  font-size: 11px;
+  min-width: 300px;
+}
+.contract .thirdRight {
+  width: 59%;
+  margin-bottom: 6px;
+  float: right;
+  font-size: 11px;
+  min-width: 300px;
+}
+.contract .halfLeft {
+  width: 47%;
+  float: left;
+  margin-bottom: 6px;
+  font-size: 11px;
+  min-width: 300px;
+}
+.contract .halfRight {
+  width: 47%;
+  margin-bottom: 6px;
+  float: right;
+  font-size: 11px;
+  min-width: 300px;
+}
+.extraUL {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.extraUL div span {
+  font-weight: bold;
+}
+.extraUL div {
+  margin: 0px;
+  list-style: none;
+  width: 45%;
+  margin-right: 3%;
+  float: left;
+  /* 		display: inline-table; */
+
+  font-size: 9px;
+}
+.miniLogo {
+  width: 100%;
+  position: relative;
+  height: 80%;
+}
+.miniLogo .miniText {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 20px;
+}
+.miniLogo img {
+  width: 200px;
+  float: left;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.contract .logoDiv {
+  position: absolute;
+  float: left;
+  top: 80px;
+  left: 10px;
+  font-size: 16px;
+  height: 100%;
+}
+.contract .officeInfo {
+  text-align: right;
+  font-size: 11px;
+  font-weight: bold;
+  float: right;
+  margin-top: 2px;
+  right: 5px;
+  width: 50%;
+  line-height: 15px;
+}
+.contract .header h1 {
+  text-align: center;
+  margin: 3px 0px;
+  position: absolute;
+  top: 10px;
+  padding: 0px;
+  width: 100%;
+  font-size: 13pt;
+  text-transform: uppercase;
+  color: #343434;
+  clear: both;
+  text-shadow: 1px 1px #898989;
+}
+.contract .header {
+  color: #343434;
+  width: 96%;
+  padding: 5px 0px;
+  position: relative;
+  top: 0px;
+  <!--background-color: #aa0000;
+  -->height: 60px;
+  padding: 5px 2%;
+  border-radius: 10px;
+}
+.contract .calendar {
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+}
+.contract .calendar div .month {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  font-size: 11px;
+  line-height: 16px;
+  height: 16px;
+  background-color: #006633;
+  color: #fff;
+  margin: 0px 0px 2px 0px;
+}
+.contract .calendar div {
+  width: 15%;
+  margin: 2px 2px;
+  height: 34px;
+  line-height: 16px;
+  float: left;
+  border: 1px solid #898989;
+  padding: 0px;
+  background-color: #fff;
+}
+.contract .targetInsects div img {
+  height: 20px;
+  width: 30px;
+  float: left;
+}
+.contract .targetInsects div {
+  list-style: none;
+  width: 24%;
+  float: left;
+  font-size: 9px;
+  line-height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.contract .targetInsects {
+  clear: both;
+}
+.contract .moxieLineRule div {
+  height: 4px;
+  background-color: #aa0000;
+  width: 100%;
+}
+.contract .moxieLineRule {
+  width: 100%;
+  border: 1px solid green;
+  padding: 1px 0px;
+  border-left: none;
+  border-right: none;
+  margin: 6px 0px;
+}
+.contract .pointeHeader {
+  color: #006633;
+  font-size: 14px;
+  font-weight: bold;
+}
+.contract h3,
+.contract h4 {
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  color: #fff;
+  background-color: #006633;
+  text-align: center;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 3px 0px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.contract .filledBox {
+  background-color: #006633;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  margin: 0px;
+  padding: 4px 1%;
+  color: #fff;
+  font-size: 9px;
+  text-align: justify;
+}
+.contract .borderBox {
+  border: 1px solid #5a9364;
+  padding: 2px 1% 2px 1%;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  margin: 0px;
+  line-height: 16px;
+}
+.contract .extraUL {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.contract .extraUL div span {
+  font-weight: bold;
+}
+.contract .extraUL div {
+  margin: 0px;
+  list-style: none;
+  width: 30%;
+  margin-right: 3%;
+  float: left;
+}
+.contract .val1 {
+  width: 35%;
+  text-align: right;
+  float: right;
+  height: 16px;
+  line-height: 16px;
+  font-size: 11px;
+}
+.contract .lbl1 {
+  width: 60%;
+  clear: both;
+  height: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  float: left;
+  font-size: 11px;
+}
+.contract div {
+  font-size: 10px;
+}
