@@ -1,663 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="contract">
-      <div class="header">
-        <div class="officeInfo" style="margin-top: 75px;">
-          {{officeName}}<br />
-          {{officeAddress}}<br />
-          {{officeCity}}, {{officeState}} {{officeZip}}<br />
-          {{officePhone}} | {{officeEmail}}<br />
-          License #: {{officeLicenseNumber}}
-        </div>
-        <h1>
-          Service Agreement
-        </h1>
-        <h1>
-          <br /><span class="salesRepName"
-            >Sales Representative: {{repName}}</span
-          >
-        </h1>
-        <div class="logoDiv">
-          <div class="miniLogo">
-            <img
-              src="{{officeLogo}}"
-              style="height: 60px; width: auto; cursor: pointer;"
-            />
-          </div>
-          <div class="miniLogo"><br /></div>
-          <div class="miniLogo"><br /></div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div style="clear:both; height:5px;"></div>
-      <div class="half left">
-        <h3
-          style="font-size: 1.2rem; padding: .5rem;"
-          class="customer-info__heading"
-        >
-          Customer Information
-        </h3>
-        <p style="padding:0; margin: 5px auto;" class="customer-info">
-          Name: {{customerName}}
-        </p>
-        <p style="padding:0; margin: 5px auto;" class="customer-info">
-          Address: {{address}}
-        </p>
-        <p style="padding:0; margin: 5px auto;" class="customer-info">
-          City:{{city}} State:{{state}} Zip:{{zip}}<br />{{mapCode}}
-        </p>
-        <p style="padding:0; margin: 5px auto;" class="customer-info">
-          Primary Phone:{{phone1}} | Secondary Phone {{phone2}}
-        </p>
-        <p style="padding:0; margin: 5px auto;" class="customer-info">
-          Primary Email: {{email}}
-        </p>
+<body>
+  <div class="contract">
+    <div class="header">
+      <div class="officeInfo" style="margin-top: 75px;">
+        {{officeName}}<br />
+        {{officeAddress}}<br />
+        {{officeCity}}, {{officeState}} {{officeZip}}<br />
+        {{officePhone}} | {{officeEmail}}<br />
+        License #: {{officeLicenseNumber}}
       </div>
-
-      <div class="half right">
-        <h3
-          style="font-size: 1.2rem; padding: .5rem;"
-          class="service--info__heading"
-        >
-          Inital Service Information
-        </h3>
-        <p style="padding:0; margin: 5px auto;" class="service-info">
-          Date: {{Date}} Time: {{Time}}
-        </p>
-        <p style="padding:0; margin: 5px auto;" class="service-info">
-          <input type="checkbox" id="pets" class="customer-exceptions" />
-          <label for="pets">Pets</label>
-          <input type="checkbox" id="ponds" class="customer-exceptions" />
-          <label for="ponds">Ponds</label>
-          <input
-            type="checkbox"
-            name="service-other"
-            class="customer-exceptions"
-          />
-          <label for="other">Other:</label>
-          <input
-            style="border-top: none;"
-            type="text"
-            id="other"
-            class="customer-exceptions"
-          />
-        </p>
-        <p style="padding:0; margin: 5px auto;" class="service-info">
-          Initial Service Charge: ${{initialTotal}}
-        </p>
-        <p style="padding:0; margin: 5px auto;" class="service-info">
-          Regular Service Charge: ${{recurringCharge}}
-        </p>
-      </div>
-
-      <div style="clear:both; height:5px;"></div>
-      <div class="section info">
-        <div class="half left">
-          <h3 class="info__heading" style="font-size: 1.2rem; padding: .5rem;">
-            Information
-          </h3>
-          <p
-            style="padding-top:2rem; padding-left: 1.75rem; margin: 5px auto ;"
-            class="info__text"
-          >
-            Our Pest Service Includes:
-          </p>
-          <ul class="info__list">
-            <li class="info__list--item">
-              Treatment inside and outside residence/business on initial visit
-            </li>
-            <li class="info__list--item">
-              Treatment inside as needed and upon request on following visits
-            </li>
-          </ul>
+      <h1>
+        Service Agreement
+      </h1>
+      <h1>
+        <br /><span class="salesRepName">Sales Representative: {{repName}}</span>
+      </h1>
+      <div class="logoDiv">
+        <div class="miniLogo">
+          <img src="{{officeLogo}}" style="height: 60px; width: auto; cursor: pointer;" />
         </div>
-        <div class="half right">
-          <h3
-            style="font-size: 1.2rem; padding: .5rem;"
-            class="frequency__heading"
-          >
-            Frequency Of Service
-          </h3>
-          <div class="frequency__container">
-            <input type="checkbox" name="Quarterly" id="quarterly" />
-            <label for="Quarterly">Quarterly (once every 3 months)</label>
-            <br />
-            <input type="checkbox" name="Other" />
-            <label for="other2">Other (specify)</label>
-            <input style="border-top: none;" id="other-2" type="text" />
-          </div>
-        </div>
+        <div class="miniLogo"><br /></div>
+        <div class="miniLogo"><br /></div>
       </div>
-
-      <div style="clear:both; height:5px;"></div>
-
-      <!-- <div class="calendar container" style="margin: 0 auto; width: 500px; display: block;">
-            <div class="container__month" style="float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">J</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        January
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">F</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        February
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">M</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        March
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">A</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        April
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">M</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">May</p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">J</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        June
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">J</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        July
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">A</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        August
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">S</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        September
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">O</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        October
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">N</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        November
-                    </p>
-                </div>
-            </div>
-            <div class="container__month" style="  float: left;
-      width: 75px;
-      height: 75px;
-        display: inline-block;
-        background-color: #006633;">
-                <div class="month" style="width:75px; border: none;">
-                    <h2 class="month--heading">D</h2>
-                    <p style="padding:0; margin: 5px auto ;" class="month--text">
-                        December
-                    </p>
-                </div>
-            </div>
-        </div> -->
-      <div class="date__container full">
-        <h3 style="font-size: 1.2rem; padding: .5rem;">
-          Service Dates & Agreement
-        </h3>
-        <div
-          class="terms-conditions__container"
-          style="overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 98.8%;"
-        >
-          <p style="text-align: center; font-size: 1rem;">
-            {{#serviceSchedule}}..{{/serviceSchedule}}
-          </p>
-          <div style="clear:both; height:5px;"></div>
-          <div
-            class="month-agreement"
-            style="width: 80%; border: 1px solid rgba(0,0,0,0.5); margin: 0 auto;"
-          >
-            <p style="padding: 1em;">
-              I understand this agreement is for {{duration}} service months. If
-              for any reason I am unable to fulfill the commitment associated
-              with this service agreement, I agree to pay the difference between
-              the regular initial service charge and the discounted initial
-              service charge plus an early termination fee of 60% of the
-              remaining contract value.
-            </p>
-            <p style="text-align: right; padding-right: 1rem;">
-              Client Initals:______________
-            </p>
-          </div>
-          <div style="clear:both; height:5px;"></div>
-          <div class="pest-selection" style="width: 100%; margin: 0 auto;">
-            <div
-              class="clear-container"
-              style="    width: 40%;
-                    margin: 0 auto;"
-            >
-              <div
-                class="pest-selection__eco"
-                style="margin: 0 auto; text-align: center; font-size: small; margin: 1rem; padding: 0.2rem .2rem; background-color: #006633;color:white;"
-              >
-                <input
-                  type="checkbox"
-                  name="general-pest-service"
-                  id="#general-pest"
-                />
-                <label for="general-pest">General Pest Service</label>
-                <br />
-                <input
-                  type="checkbox"
-                  name="general-pest-service"
-                  id="#eco-friendly"
-                />
-                <label for="eco-friendly">Eco-Friendly Service</label>
-              </div>
-            </div>
-            <div class="pest-selection__main" >
-              <div
-                class="pest-selection__main--1"
-                style="float: left; padding: 1rem;"
-              >
-                <input
-                  type="checkbox"
-                  id="pest-selection-1"
-                  name="pest-selection-1"
-                />
-                <label for="pest-selection-1">Carpenter Ants</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-2"
-                  name="pest-selection-2"
-                />
-                <label for="pest-selection-2">Fire Ants</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-3"
-                  name="pest-selection-3"
-                />
-                <label for="pest-selection-3">Crickets</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-4"
-                  name="pest-selection-4"
-                />
-                <label for="pest-selection-4">Earwigs</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-5"
-                  name="pest-selection-5"
-                />
-                <label for="pest-selection-5">Millipedes</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-6"
-                  name="pest-selection-6"
-                />
-                <label for="pest-selection-6">Pillbugs</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-7"
-                  name="pest-selection-7"
-                />
-                <label for="pest-selection-7">Roaches</label>
-                <br />
-              </div>
-              <div
-                class="pest-selection__main--2"
-                style="float: left; padding: 1rem"
-              >
-                <input
-                  type="checkbox"
-                  id="pest-selection-1"
-                  name="pest-selection-1"
-                />
-                <label for="pest-selection-1">Silverfish</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-2"
-                  name="pest-selection-2"
-                />
-                <label for="pest-selection-2">Spiders</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-3"
-                  name="pest-selection-3"
-                />
-                <label for="pest-selection-3">Wasp</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-4"
-                  name="pest-selection-4"
-                />
-                <label for="pest-selection-4">Pantry Pests</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-5"
-                  name="pest-selection-5"
-                />
-                <label for="pest-selection-5">Rodent Control</label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-6"
-                  name="pest-selection-6"
-                />
-                <label for="pest-selection-7">Boxes Quantity:</label>
-                <input
-                  style="border-top: none; width: 50px;"
-                  type="number"
-                  id="pest-selection-7"
-                  name="pest-selection-7"
-                />
-                <br />
-              </div>
-              <div
-                class="pest-selection__main--3"
-                style=" padding: 1rem"
-              >
-                <input
-                  type="checkbox"
-                  id="pest-selection-1"
-                  name="pest-selection-1"
-                />
-                <!-- Where Does the price come from? -->
-                <label for="pest-selection-1"
-                  >Mosquito Control:$ {{Mosquito Price}}
-                </label>
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-2"
-                  name="pest-selection-2"
-                />
-                <label for="pest-selection-2"
-                  >Rodent Lifetime Limited Warranty:
-                  ${{RodentWarranyPrice}}</label
-                >
-                <br />
-                <input
-                  type="checkbox"
-                  id="pest-selection-3"
-                  name="pest-selection-3"
-                />
-                <label for="pest-selection-3"
-                  >Rodent Evaluation: ${{Termite Evaluation}}</label
-                >
-                <br />
-                <label for="pest-selection-4"
-                  >Number of crawlspace entrances</label
-                >
-                <input
-                  style="border-top: none; width: 50px;"
-                  type="number"
-                  id="pest-selection-4"
-                  name="pest-selection-4"
-                />
-                <br />
-                <label  for="pest-selection-5"
-                  >Number of attics</label
-                >
-                <input
-                  style="border-top: none; width: 50px;"
-                  type="number"
-                  id="pest-selection-5"
-                  name="pest-selection-5"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="clear:both; height:5px;"></div>
-      <div class="full">
-        <h3 style="font-size: 1.2rem; padding: .5rem;">Service Guarantees</h3>
-        <div
-          class="gurantee container"
-          style="overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 98.8%;"
-        >
-          <h5 style="font-size: medium; padding-left: 1rem;">
-            Our Promise:
-            <span style="font-size: 12px;"
-              >We will control pests in your home or office using the most
-              innovative techniques and products available. Your family's
-              welfare and the environment are our top priorities. If at any time
-              you feel we have not lived up to our promise, please let us know
-              how we can do better. <span></span
-            ></span>
-          </h5>
-          <h5 style="font-size: medium; padding-left: 1rem;">
-            Guarantee:
-            <span style="font-size: 12px;"
-              >Let us put your mind at ease. If pests appear again between our
-              regular visits, we will return and re-treat the affected areas at
-              absolutely no cost to you whatsoever. <span></span
-            ></span>
-          </h5>
-        </div>
-      </div>
-      <div class="total__container full">
-        <h3 style="font-size: 1.2rem; padding: .5rem;">Total Charges</h3>
-        <div
-          class="gurantee container"
-          style="overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 98.8%;"
-        >
-          <ul style="list-style: none; padding: 0; font-size:medium;">
-            <li
-              style="font-size: medium; font-weight: 700; padding-left: 1rem;"
-            >
-              Inital Service: ${{initialTotal}}
-            </li>
-            <li
-              style="font-size: medium; font-weight: 700; padding-left: 1rem;"
-            >
-              Extra Equipment: ${{#addOns}}{{amount}}{{/addOns}}
-            </li>
-            <li
-              style="font-size: medium; font-weight: 700; padding-left: 1rem;"
-            >
-              Sub Total: ${{initialSubTotal}}
-            </li>
-            <li
-              style="font-size: medium; font-weight: 700; padding-left: 1rem;"
-            >
-              Sales Tax: 8.25%
-            </li>
-            <li
-              style="font-size: medium; font-weight: 700; padding-left: 1rem;"
-            >
-              Total: ${{initialSubTotal}}
-            </li>
-            <li
-              style="font-size: medium; font-weight: 700; padding-left: 1rem;"
-            >
-              Amount: Collected:
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- <div style="clear:both; height:5px;"></div> -->
-      <!-- Add Terms & Agreement  Checkbox -->
-      <div class="terms-div full">
-        <h3 style="font-size: 1.2rem; padding: .5rem;">Terms & Conditions</h3>
-        <div
-          class="terms-conditions__container"
-          style=" overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 99%;"
-        >
-          <div class="terms__container">
-            <input type="checkbox" name="terms-box" id="terms-box" /><label
-              style="font-size: inherit;"
-              for="terms-box"
-              >Following completion of this program, regularly scheduled home
-              maintenance will continue until such time as the client contacts
-              Safe Pro to cancel. A notice of this cancellation must be received
-              prior to the next scheduled home visit.</label
-            >
-          </div>
-          <div
-            class="representative__container"
-            style="width: 50%;   float: left;"
-          >
-            <h5 style="text-transform: uppercase; font-size: small;">
-              I understand this agreement is for {{annualRecurringServices}}
-              scheduled services.
-              <br />
-              <span>
-                Purchaser Name: {{customerName}}
-                <br />
-                Date: {{dateSigned}}
-              </span>
-            </h5>
-          </div>
-          <div class="customer__container" style="width: 98.8%;">
-            <h5 style="text-transform: uppercase; font-size: small;">
-              Customer Initials
-              <br />
-              <span>
-                Representative Name: {{repName}}
-                <br />
-                Date: {{dateSigned}}
-              </span>
-            </h5>
-          </div>
-        </div>
-      </div>
-
-      <div style="clear:both; height:5px;"></div>
-
-      <div class="full">
-        <h3 style="font-size: 1.2rem; padding: .5rem;">
-          Credit Card Authorization - Spray and Pay Program
-        </h3>
-        <div
-          class="authorize__container"
-          style=" overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 99%;"
-        >
-          <div class="authorize__container-1">
-            <input type="checkbox" name="cardbox-1" id="cardbox-1" /><label
-              for="cardbox-1"
-              >I authorize a recurring charge against my credit/debit card after
-              each service performed by Safe Pro Pest Control. I understand this
-              may take up to 48 hours after the completed service. I understand
-              that my charges will include any and all revolving services
-              provided and any cancellation fees.</label
-            >
-          </div>
-          <div class="authorize__container-2">
-            <input type="checkbox" name="cardbox-2" id="cardbox-2" /><label
-              for="cardbox-2"
-              >I authorize a one-time charge against my credit/debit card for a
-              service and/or services performed by Safe Pro Pest Control. I
-              understand this may take up to 48 hours after the completed
-              service.</label
-            >
-          </div>
-          <div class="signature__container" style="padding: 1rem;">
-            <label for="signature">Customer Signature</label
-            ><input
-              style="margin-left: 1rem;"
-              type="text"
-              name="signature"
-              id="signature"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div style="clear:both; height:5px;"></div>
     </div>
-  </body>
+
+    <div style="clear:both; height:5px;"></div>
+    <div class="half left">
+      <h3 class="customer-info__heading">
+        Customer Information
+      </h3>
+      <p style="padding:0; margin: 5px auto;" class="customer-info">
+        Name: {{customerName}}
+      </p>
+      <p style="padding:0; margin: 5px auto;" class="customer-info">
+        Address: {{address}}
+      </p>
+      <p style="padding:0; margin: 5px auto;" class="customer-info">
+        City:{{city}} State:{{state}} Zip:{{zip}}<br />{{mapCode}}
+      </p>
+      <p style="padding:0; margin: 5px auto;" class="customer-info">
+        Primary Phone:{{phone1}} | Secondary Phone {{phone2}}
+      </p>
+      <p style="padding:0; margin: 5px auto;" class="customer-info">
+        Primary Email: {{email}}
+      </p>
+    </div>
+
+    <div class="half right">
+      <h3 class="service--info__heading">
+        Inital Service Information
+      </h3>
+      <p style="padding:0; margin: 5px auto;" class="service-info">
+        Date: {{Date}} Time: {{Time}}
+      </p>
+      <p style="padding:0; margin: 5px auto;" class="service-info">
+        <input type="checkbox" id="pets" class="customer-exceptions" />
+        <label for="pets">Pets</label>
+        <input type="checkbox" id="ponds" class="customer-exceptions" />
+        <label for="ponds">Ponds</label>
+        <input type="checkbox" name="service-other" class="customer-exceptions" />
+        <label for="other">Other:</label>
+        <input style="border-top: none;" type="text" id="other" class="customer-exceptions" />
+      </p>
+      <p style="padding:0; margin: 5px auto;" class="service-info">
+        Initial Service Charge: ${{initialTotal}}
+      </p>
+      <p style="padding:0; margin: 5px auto;" class="service-info">
+        Regular Service Charge: ${{recurringCharge}}
+      </p>
+    </div>
+
+    <div style="clear:both; height:5px;"></div>
+    <div class="section info">
+      <div class="half left">
+        <h3 class="info__heading">
+          Information
+        </h3>
+        <p class="info__text">
+          Our Pest Service Includes:
+        </p>
+        <ul class="info__list">
+          <li class="info__list--item">
+            Treatment inside and outside residence/business on initial visit
+          </li>
+          <li class="info__list--item">
+            Treatment inside as needed and upon request on following visits
+          </li>
+        </ul>
+      </div>
+      <div class="half right">
+        <h3 class="frequency__heading">
+          Frequency Of Service
+        </h3>
+        <div class="frequency__container">
+          <input type="checkbox" name="Quarterly" id="quarterly" />
+          <label for="Quarterly">Quarterly (once every 3 months)</label>
+          <br />
+          <input type="checkbox" name="Other" />
+          <label for="other2">Other (specify)</label>
+          <input style="border-top: none;" id="other-2" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <div style="clear:both; height:5px;"></div>
+
+
+    <div style="clear:both; height:5px;"></div>
+
+
+    <div style="width:100%; border:0px;">
+      <h4 style="margin:4px 0px;">{{description}} Subscription & Agreement</h4>
+      <div class="calendar">
+        {{#serviceSchedule}}
+        <div>
+          <div class="month">{{month}} {{year}}</div><br>{{{recurringCharge}}}
+        </div>
+        {{/serviceSchedule}}
+      </div>
+    </div>
+
+    <div class="clr"></div>
+    <div class="terms-conditions__container"
+      style="overflow: auto; border: 1px solid #ffffff; margin-top: -5px; padding: 10px; width: 98.8%;">
+      <div style="clear:both; height:5px;"></div>
+      <!-- <div class="month-agreement" style="width: 80%; border: 1px solid rgba(0,0,0,0.5); margin: 0 auto;">
+          <p style="padding: 1em;">
+            I understand this agreement is for {{duration}} service months. If
+            for any reason I am unable to fulfill the commitment associated
+            with this service agreement, I agree to pay the difference between
+            the regular initial service charge and the discounted initial
+            service charge plus an early termination fee of 60% of the
+            remaining contract value.
+          </p>
+          <p style="text-align: right; padding-right: 1rem;">
+            Client Initals:______________
+          </p>
+        </div> -->
+      <div style="clear:both; height:5px;"></div>
+      <div class="pest-selection" style="width: 100%; margin: 0 auto;">
+        <div class="clear-container" style="    width: 40%;
+                    margin: 0 auto;">
+          <div class="pest-selection__eco"
+            style="margin: 0 auto; text-align: center;  margin: 1rem; padding: 0.2rem .2rem; background-color: #006633;color:white;">
+            <input type="checkbox" name="general-pest-service" id="#general-pest" />
+            <label for="general-pest">General Pest Service</label>
+            <br />
+            <input type="checkbox" name="general-pest-service" id="#eco-friendly" />
+            <label for="eco-friendly">Eco-Friendly Service</label>
+          </div>
+        </div>
+        <div style="width:100%; border:0px;">
+          <h3>Included Insects</h3>
+          <div class="targetInsects">
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/cockroach.png" style="cursor: pointer;">Roach
+            </div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/silverfish.png"
+                style="cursor: pointer;">Silverfish</div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/fireant.png" style="cursor: pointer;">Argentine
+              Ants</div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/cricket.png" style="cursor: pointer;">Crickets
+            </div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/millipede.jpg"
+                style="cursor: pointer;">Millipedes</div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/pillbug.png" style="cursor: pointer;">Sow Bugs
+            </div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/boxelder.jpg" style="cursor: pointer;">Box
+              Elders</div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/earwig.png" style="cursor: pointer;">Earwigs
+            </div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/ant.png" style="cursor: pointer;">Odorous Ants
+            </div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/spider.png" style="cursor: pointer;">Spiders
+            </div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/centipede.jpg"
+                style="cursor: pointer;">Centipedes</div>
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/cockroach.png"
+                style="cursor: pointer;">Oriental Roaches</div>
+          </div>
+        </div>
+        <div style="clear:both; height:5px;"></div>
+        <!-- Additional Pests -->
+        <div style="width:100%; border:0px;">
+          <h3>Additional Pests</h3>
+          <div class="targetInsects">
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/rat.png" style="cursor: pointer;">Mice/Rats
+            </div>
+
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/flea.png" style="cursor: pointer;">Fleas</div>
+
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/wasp.png"
+                style="cursor: pointer;">Wasps/Hornets</div>
+
+            <div><img src="https://d1miv8abus7gau.cloudfront.net/insects/ant.png" style="cursor: pointer;">Carpenter
+              Ants</div>
+              <div style="padding-top: 5px;" >
+                <label for="pest-other">Other</label>
+                <input style="height: fit-content; border-top: none;" type="text" name="other" id="other">
+              </div>
+          </div>
+          <div style="clear:both; height:5px;"></div>
+        </div>
+        <div style="clear:both; height:5px;"></div>
+        <div class="full">
+          <h3>Service Guarantees</h3>
+          <div class="gurantee container"
+            style="overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 98.8%;">
+            <h5 style=" padding-left: 1rem;">
+              Our Promise:
+              <span style="">We will control pests in your home or office using the most
+                innovative techniques and products available. Your family's
+                welfare and the environment are our top priorities. If at any time
+                you feel we have not lived up to our promise, please let us know
+                how we can do better. <span></span></span>
+            </h5>
+            <h5 style=" padding-left: 1rem;">
+              Guarantee:
+              <span style="">Let us put your mind at ease. If pests appear again between our
+                regular visits, we will return and re-treat the affected areas at
+                absolutely no cost to you whatsoever. <span></span></span>
+            </h5>
+          </div>
+        </div>
+        <div class="total__container full">
+          <h3>Total Charges</h3>
+          <div class="gurantee container"
+            style="overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 98.8%;">
+            <ul style="list-style: none; padding: 0; text-align: center;">
+              <li style=" font-weight: 700; padding-left: 1rem;">
+                Inital Service: ${{initialTotal}}
+              </li>
+              <li style=" font-weight: 700; padding-left: 1rem;">
+                Extra Equipment: ${{#addOns}}{{amount}}{{/addOns}}
+              </li>
+              <li style=" font-weight: 700; padding-left: 1rem;">
+                Sub Total: ${{initialSubTotal}}
+              </li>
+              <li style=" font-weight: 700; padding-left: 1rem;">
+                Sales Tax: 8.25%
+              </li>
+              <li style=" font-weight: 700; padding-left: 1rem;">
+                Total: ${{initialSubTotal}}
+              </li>
+              <li style=" font-weight: 700; padding-left: 1rem;">
+                Amount: Collected:
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div style="clear:both; height:5px;"></div> -->
+        <!-- Add Terms & Agreement  Checkbox -->
+        <div class="terms-div full">
+          <h3>Terms & Conditions</h3>
+          <div class="terms-conditions__container"
+            style=" overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 99%;">
+            <div class="terms__container">
+              <input type="checkbox" name="terms-box" id="terms-box" /><label for="terms-box">Following completion of
+                this
+                program, regularly scheduled home
+                maintenance will continue until such time as the client contacts
+                Safe Pro to cancel. A notice of this cancellation must be received
+                prior to the next scheduled home visit.</label>
+            </div>
+            <div class="representative__container" style="width: 50%;   float: left;">
+              <h5 style="text-transform: uppercase; ">
+                I understand this agreement is for {{annualRecurringServices}}
+                scheduled services.
+                <br />
+                <span>
+                  Purchaser Name: {{customerName}}
+                  <br />
+                  Date: {{dateSigned}}
+                </span>
+              </h5>
+            </div>
+            <div class="customer__container" style="width: 98.8%;">
+              <h5 style="text-transform: uppercase; ">
+                Customer Initials
+                <br />
+                <span>
+                  Representative Name: {{repName}}
+                  <br />
+                  Date: {{dateSigned}}
+                </span>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div style="clear:both; height:5px;"></div>
+
+        <!-- <div class="full">
+      <h3 >
+        Credit Card Authorization - Spray and Pay Program
+      </h3>
+      <div class="authorize__container"
+        style=" overflow: auto; border: 1px solid #006633; margin-top: -5px; padding: 10px; width: 99%;">
+        <div class="authorize__container-1">
+          <input type="checkbox" name="cardbox-1" id="cardbox-1" /><label for="cardbox-1">I authorize a recurring charge
+            against my credit/debit card after
+            each service performed by Safe Pro Pest Control. I understand this
+            may take up to 48 hours after the completed service. I understand
+            that my charges will include any and all revolving services
+            provided and any cancellation fees.</label>
+        </div>
+        <div class="authorize__container-2">
+          <input type="checkbox" name="cardbox-2" id="cardbox-2" /><label for="cardbox-2">I authorize a one-time charge
+            against my credit/debit card for a
+            service and/or services performed by Safe Pro Pest Control. I
+            understand this may take up to 48 hours after the completed
+            service.</label>
+        </div>
+        <div class="signature__container" style="padding: 1rem;">
+          <label for="signature">Customer Signature</label><input style="margin-left: 1rem;" type="text"
+            name="signature" id="signature" />
+        </div>
+      </div>
+    </div> -->
+
+        <div style="clear:both; height:5px;"></div>
+      </div>
+</body>
+
 </html>
